@@ -157,6 +157,15 @@
     .project:hover { border-color: var(--green); transform: translateY(-4px); }
 
     .project-icon { font-size: 28px; }
+    .project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  margin-bottom: 18px;
+}
     .project h3 { font-size: 19px; margin: 12px 0 8px; }
     .project p { color: var(--muted); font-size: 14px; }
     .tools { color: var(--green); font-size: 12px; margin: 16px 0; }
@@ -269,8 +278,12 @@
 
       <div class="projects">
         <article class="project">
-          <div class="project-icon">💳</div>
-          <h3>Financial Transaction Analytics</h3>
+          <img
+  class="project-image"
+  src="01_Financial_Dashboard_Overview.png"
+  alt="Financial Transaction Overview Power BI dashboard"
+>
+<h3>Financial Transaction Analytics</h3>
           <p>Power BI dashboard analyzing transaction methods, transaction types,
           financial trends and key KPIs.</p>
           <div class="tools">POWER BI · EXCEL · POWER QUERY</div>
