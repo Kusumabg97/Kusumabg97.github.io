@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kusuma B G's Data Analyst portfolio featuring Power BI, Excel, Tableau and data analytics projects.">
+  <title>Kusuma B G | Data Analyst Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --panel: #121a27;
+      --border: #263244;
+      --text: #f1f5f9;
+      --muted: #a2afc2;
+      --green: #55e6a5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: min(1080px, 90%); margin: auto; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #0b0f17ee;
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo { font-size: 20px; font-weight: 800; }
+    .logo span { color: var(--green); }
+
+    .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .nav-links a { color: var(--muted); font-size: 14px; }
+    .nav-links a:hover { color: var(--green); }
+
+    .hero { padding: 100px 0 85px; }
+
+    .eyebrow {
+      color: var(--green);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.12;
+      margin: 20px 0;
+      letter-spacing: -2px;
+    }
+
+    h1 span { color: var(--green); }
+
+    .hero p, .section-intro {
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    .buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 19px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn-primary { background: var(--green); color: #07130e; border-color: var(--green); }
+    .btn:hover { transform: translateY(-2px); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 48px;
+      max-width: 720px;
+    }
+
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .stat strong { display: block; font-size: 23px; color: var(--green); }
+    .stat span { color: var(--muted); font-size: 12px; }
+
+    section { padding: 68px 0; }
+
+    .section-title { font-size: clamp(27px, 4vw, 36px); margin-bottom: 10px; }
+    .section-title span { color: var(--green); }
+
+    .section-intro { margin-bottom: 30px; }
+
+    .about-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      color: var(--muted);
+    }
+
+    .skills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: #172638;
+      border: 1px solid #2a4050;
+      color: #d8fbea;
+      padding: 7px 13px;
+      border-radius: 7px;
+      font-size: 13px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .project:hover { border-color: var(--green); transform: translateY(-4px); }
+
+    .project-icon { font-size: 28px; }
+    .project h3 { font-size: 19px; margin: 12px 0 8px; }
+    .project p { color: var(--muted); font-size: 14px; }
+    .tools { color: var(--green); font-size: 12px; margin: 16px 0; }
+    .project-link { margin-top: auto; color: var(--green); font-weight: 700; font-size: 14px; }
+
+    .contact-box {
+      padding: 35px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      nav { align-items: flex-start; flex-direction: column; padding: 18px 0; }
+      .nav-links { gap: 15px; }
+      .hero { padding: 65px 0; }
+      .projects { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">KUSUMA<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container" id="home">
+    <div class="eyebrow">Data Analyst · Abu Dhabi, UAE</div>
+    <h1>Turning Data Into<br><span>Meaningful Insights.</span></h1>
+    <p>
+      Hi, I'm Kusuma B G. I use data analysis, business intelligence
+      and interactive dashboards to uncover trends, track KPIs and
+      support data-driven decisions.
+    </p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#projects">Explore My Projects ↗</a>
+      <a class="btn" href="https://github.com/Kusumabg97">GitHub Profile ↗</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>05</strong><span>Analytics Projects</span></div>
+      <div class="stat"><strong>06+</strong><span>Analytics Tools & Skills</span></div>
+      <div class="stat"><strong>4+ Years</strong><span>IT-Sector Experience</span></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-box">
+        I am a data analytics professional with 4+ years of IT-sector
+        experience in data management, validation, reporting and
+        SQL-based analysis. My portfolio demonstrates practical work
+        in financial transactions, HR analytics, sales performance,
+        restaurant analytics and customer complaints.
+        <br><br>
+        I enjoy transforming raw datasets into clear visualizations
+        and useful business insights. I am continuing to strengthen
+        my technical skills through hands-on analytics projects.
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical <span>Skills</span></h2>
+      <p class="section-intro">Tools I use and skills I am developing through practical projects.</p>
+      <div class="skills">
+        <span class="skill">SQL</span>
+        <span class="skill">Microsoft Excel</span>
+        <span class="skill">Power BI</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">Python</span>
+        <span class="skill">Power Query</span>
+        <span class="skill">DAX</span>
+        <span class="skill">Data Cleaning</span>
+        <span class="skill">Data Validation</span>
+        <span class="skill">KPI Reporting</span>
+        <span class="skill">Dashboard Design</span>
+        <span class="skill">Data Visualization</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <p class="section-intro">
+        Explore my analytics projects, dashboards and business reporting work.
+        Select any project to view its GitHub repository.
+      </p>
+
+      <div class="projects">
+        <article class="project">
+          <div class="project-icon">💳</div>
+          <h3>Financial Transaction Analytics</h3>
+          <p>Power BI dashboard analyzing transaction methods, transaction types,
+          financial trends and key KPIs.</p>
+          <div class="tools">POWER BI · EXCEL · POWER QUERY</div>
+          <a class="project-link" href="https://github.com/Kusumabg97/Financial-Transaction-Analytics-PowerBI" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+        </article>
+
+        <article class="project">
+          <div class="project-icon">👥</div>
+          <h3>HR Analytics Dashboard</h3>
+          <p>Interactive workforce dashboard covering demographics, employee
+          performance, attrition, attendance and training.</p>
+          <div class="tools">POWER BI · DAX</div>
+          <a class="project-link" href="https://github.com/Kusumabg97/HR-Analytics-PowerBI-Dashboard" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+        </article>
+
+        <article class="project">
+          <div class="project-icon">📈</div>
+          <h3>Sales KPI Dashboard</h3>
+          <p>Excel dashboard featuring KPI tracking, PivotTables, PivotCharts,
+          slicers and business reporting.</p>
+          <div class="tools">MICROSOFT EXCEL</div>
+          <a class="project-link" href="https://github.com/Kusumabg97/Sales-KPI-Dashboard-Excel" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+        </article>
+
+        <article class="project">
+          <div class="project-icon">🍽️</div>
+          <h3>Restaurant Sales & Customer Analytics</h3>
+          <p>Tableau project exploring restaurant revenue, orders, customers,
+          menu performance and branch performance.</p>
+          <div class="tools">TABLEAU · EXCEL · POWER QUERY</div>
+          <a class="project-link" href="https://github.com/Kusumabg97/Restaurant-Sales-Customer-Analytics-Tableau" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+        </article>
+
+        <article class="project">
+          <div class="project-icon">📋</div>
+          <h3>Customer Complaint Analytics</h3>
+          <p>Excel dashboard examining complaint trends, resolution performance,
+          SLA compliance and customer satisfaction.</p>
+          <div class="tools">EXCEL · POWER QUERY</div>
+          <a class="project-link" href="https://github.com/Kusumabg97/Customer-Complaint-Analytics-Excel" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2 class="section-title">Let's <span>Connect</span></h2>
+        <p class="section-intro">
+          Interested in my work or have a Data Analyst opportunity?
+          Feel free to explore my repositories or connect with me.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="https://github.com/Kusumabg97">GitHub Profile ↗</a>
+          <a class="btn" href="https://github.com/Kusumabg97?tab=repositories">All Repositories ↗</a>
+          <!-- Add your LinkedIn URL here when ready -->
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Kusuma B G · Data Analyst Portfolio · Built with HTML & CSS
+  </div>
+</footer>
+
+</body>
+</html>
